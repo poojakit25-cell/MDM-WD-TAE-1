@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechFest 2026 - Event Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="text-gray-800 bg-gradient-to-r from-sky-300 via-indigo-500 to-sky-300">
+
+    <nav class="bg-indigo-800 text-white px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+
+            <h1 class="text-xl md:text-2xl font-bold">
+                TechFest 2026
+            </h1>
+
+            <div class="hidden md:flex gap-6">
+                <a href="#home" class="hover:text-yellow-300">Home</a>
+                <a href="#events" class="hover:text-yellow-300">Events</a>
+                <a href="#register" class="hover:text-yellow-300">Register</a>
+                <a href="#faq" class="hover:text-yellow-300">FAQ</a>
+            </div>
+        </div>
+
+    </nav>
+
+     <section id="home" class="text-white bg-cover bg-center"
+    style="background-image: linear-gradient(rgba(79,70,229,0.75),rgba(79,70,229,0.75)), url('image tae.jpg');">
+
+        <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+
+            <p class="text-yellow-300 font-semibold mb-3">
+                COLLEGE TECH EVENT
+            </p>
+            <h2 class="text-4xl md:text-6xl font-bold mb-5">
+            TECHFEST 2026
+            </h2>
+
+            <p class="text-lg md:text-xl mb-8">
+               ✨ Join • Innovate • Create • Inspire ✨
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+
+                <div class="bg-white/10 px-5 py-3 rounded-lg
+                transition duration-300
+                hover:bg-white/20
+                hover:-translate-y-2
+                hover:shadow-lg
+                cursor-pointer">
+                    📅 25 September 2026
+                </div>
+
+                <div class="bg-white/10 px-5 py-3 rounded-lg
+                transition duration-300
+                hover:bg-white/20
+                hover:-translate-y-2
+                hover:shadow-lg
+                cursor-pointer">
+                    ⏰ 10:00 AM - 5:00 PM
+                </div>
+
+                <div class="bg-white/10 px-5 py-3 rounded-lg
+                 transition duration-300
+                hover:bg-white/20
+                hover:-translate-y-2
+                hover:shadow-lg
+                cursor-pointer">
+                    📍 College Auditorium
+                </div>
+
+            </div>
+
+            <a href="#register"
+               class="inline-block bg-blue-400 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gradient-to-r from-purple-500 to-pink-300">
+                Register Now
+            </a>
+
+        </div>
+    </section>
+
+    <section id="events" class="max-w-6xl mx-auto px-6 py-12">
+
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Event Categories
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">💻</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Coding
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Test your programming skills.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹100
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">🧠</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Quiz
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Challenge your mind.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹50
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">🎨</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Web Design
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Design an amazing website.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹150
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">🛠️</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Workshop
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Learn new technologies.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹200
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6">
+
+        <div class="bg-white rounded-xl shadow p-6 text-center">
+
+            <h3 class="text-xl font-bold mb-2">
+                🎟️ Registration Status
+            </h3>
+
+            <p class="text-gray-600">
+                <span id="registeredSeats">0</span>
+                / 100 seats registered
+            </p>
+
+            <div class="w-full bg-gray-200 rounded-full h-3 mt-4">
+                <div id="seatProgress"
+                     class="bg-indigo-600 h-3 rounded-full"
+                     style="width: 0%">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="register" class="max-w-6xl mx-auto px-6 py-12">
+
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Event Registration
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl shadow p-6 md:p-8">
+
+                <form id="registrationForm">
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           👤 Full Name 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                        <p id="nameError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           📧 Email 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="example@gmail.com"
+                            class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                        <p id="emailError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           📱 Mobile Number 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="mobile"
+                            placeholder="10 digit mobile number"
+                            maxlength="10"
+                            class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                        <p id="mobileError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           🎂 Age 
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Enter your age"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                        <p id="ageError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           🏫 College Name 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="college"
+                            placeholder="Enter college name"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                        <p id="collegeError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                          🎓 Course
+                        </label>
+
+                        <select
+                            id="course"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="">
+                                Select Course
+                            </option>
+
+                            <option value="B.Tech IT">
+                                B.Tech IT
+                            </option>
+
+                            <option value="B.Tech CSE">
+                                B.Tech CSE
+                            </option>
+
+                            <option value="BCA">
+                                BCA
+                            </option>
+
+                            <option value="MCA">
+                                MCA
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           💻 Select Event 
+                        </label>
+
+                        <select
+                            id="event"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="">
+                                Select Event
+                            </option>
+
+                            <option value="Coding Competition">
+                                Coding Competition - ₹100
+                            </option>
+
+                            <option value="Quiz Competition">
+                                Quiz Competition - ₹50
+                            </option>
+
+                            <option value="Web Design">
+                                Web Design - ₹150
+                            </option>
+
+                            <option value="Workshop">
+                                Workshop - ₹200
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                        👥 Participation Type
+                        </label>
+
+                        <div class="flex gap-6">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="participation"
+                                    value="Individual"
+                                    checked
+>
+                                Individual
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="participation"
+                                    value="Team"
+                                >
+                                Team
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div id="teamSection"
+                         class="hidden mb-5 p-4 bg-gray-50 rounded-lg">
+
+                        <label class="block font-semibold mb-2">
+                            Team Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="teamName"
+                            placeholder="Enter team name"
+                            class="w-full border rounded-lg px-4 py-3 mb-4">
+
+                        <label class="block font-semibold mb-2">
+                            Number of Members
+                        </label>
+
+                        <select
+                            id="members"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="2">2 Members</option>
+                            <option value="3">3 Members</option>
+                            <option value="4">4 Members</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           🥗 Food Preference
+                        </label>
+
+                        <select
+                            id="food"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="Vegetarian">
+                                Vegetarian
+                            </option>
+
+                            <option value="Non-Vegetarian">
+                                Non-Vegetarian
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           👕 T-Shirt Size
+                        </label>
+
+                        <select
+                            id="tshirt"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="S">Small (S)</option>
+                            <option value="M">Medium (M)</option>
+                            <option value="L">Large (L)</option>
+                            <option value="XL">Extra Large (XL)</option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                        🧑‍🎓 Are you a student?
+                        </label>
+
+                        <div class="flex gap-6">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="student"
+                                    value="Yes"
+                                    checked
+                                >
+                                Yes
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="student"
+                                    value="No"
+                                >
+                                No
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           📝 Special Requirements
+                        </label>
+
+                        <textarea
+                            id="requirements"
+                            maxlength="200"
+                            rows="4"
+                            placeholder="Any special requirements..."
+                            class="w-full border rounded-lg px-4 py-3"
+                        ></textarea>
+
+                        <p class="text-sm text-gray-500 text-right">
+                            <span id="charCount">0</span> / 200
+                        </p>
+
+                    </div>
+
+                    <div class="flex gap-4">
+
+                        <button
+                            type="button"
+                            onclick="clearForm()"
+                            class="w-1/2 bg-gray-200 py-3 rounded-lg font-semibold hover:bg-gray-300">
+                            Clear
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="openConfirmation()"
+                            class="w-1/2 bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+                            Register
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+
+            <div>
+
+                <div class="bg-white rounded-xl shadow p-6 md:p-8 sticky top-5">
+
+                    <h2 class="text-2xl font-bold mb-6">
+                        📋 Registration Summary
+                    </h2>
+
+                    <div class="space-y-4">
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">👤Name</span>
+                            <span id="summaryName"
+                                  class="font-semibold">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">📧Email</span>
+                            <span id="summaryEmail"
+                                  class="font-semibold text-right">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">📱Mobile</span>
+                            <span id="summaryMobile"
+                                  class="font-semibold">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">🏫 College</span>
+                            <span id="summaryCollege"
+                                  class="font-semibold text-right">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">🎯Event</span>
+                            <span id="summaryEvent"
+                                  class="font-semibold">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">👥Participation</span>
+                            <span id="summaryParticipation"
+                                  class="font-semibold">
+                                Individual
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">🍱Food</span>
+                            <span id="summaryFood"
+                                  class="font-semibold">
+                                Vegetarian
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">👕 T-Shirt</span>
+                            <span id="summaryTshirt"
+ 
