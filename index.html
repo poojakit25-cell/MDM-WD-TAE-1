@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechFest 2026 - Event Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="text-gray-800 bg-gradient-to-r from-sky-300 via-indigo-500 to-sky-300">
+
+    <nav class="bg-indigo-800 text-white px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+
+            <h1 class="text-xl md:text-2xl font-bold">
+                TechFest 2026
+            </h1>
+
+            <div class="hidden md:flex gap-6">
+                <a href="#home" class="hover:text-yellow-300">Home</a>
+                <a href="#events" class="hover:text-yellow-300">Events</a>
+                <a href="#register" class="hover:text-yellow-300">Register</a>
+                <a href="#faq" class="hover:text-yellow-300">FAQ</a>
+            </div>
+        </div>
+
+    </nav>
+
+     <section id="home" class="text-white bg-cover bg-center"
+    style="background-image: linear-gradient(rgba(79,70,229,0.75),rgba(79,70,229,0.75)), url('image tae.jpg');">
+
+        <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+
+            <p class="text-yellow-300 font-semibold mb-3">
+                COLLEGE TECH EVENT
+            </p>
+            <h2 class="text-4xl md:text-6xl font-bold mb-5">
+            TECHFEST 2026
+            </h2>
+
+            <p class="text-lg md:text-xl mb-8">
+               ✨ Join • Innovate • Create • Inspire ✨
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+
+                <div class="bg-white/10 px-5 py-3 rounded-lg
+                transition duration-300
+                hover:bg-white/20
+                hover:-translate-y-2
+                hover:shadow-lg
+                cursor-pointer">
+                    📅 25 September 2026
+                </div>
+
+                <div class="bg-white/10 px-5 py-3 rounded-lg
+                transition duration-300
+                hover:bg-white/20
+                hover:-translate-y-2
+                hover:shadow-lg
+                cursor-pointer">
+                    ⏰ 10:00 AM - 5:00 PM
+                </div>
+
+                <div class="bg-white/10 px-5 py-3 rounded-lg
+                 transition duration-300
+                hover:bg-white/20
+                hover:-translate-y-2
+                hover:shadow-lg
+                cursor-pointer">
+                    📍 College Auditorium
+                </div>
+
+            </div>
+
+            <a href="#register"
+               class="inline-block bg-blue-400 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gradient-to-r from-purple-500 to-pink-300">
+                Register Now
+            </a>
+
+        </div>
+    </section>
+
+    <section id="events" class="max-w-6xl mx-auto px-6 py-12">
+
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Event Categories
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">💻</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Coding
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Test your programming skills.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹100
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">🧠</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Quiz
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Challenge your mind.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹50
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">🎨</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Web Design
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Design an amazing website.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹150
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow text-center">
+                <div class="text-4xl mb-3">🛠️</div>
+                <h3 class="font-bold text-xl mb-2">
+                    Workshop
+                </h3>
+                <p class="text-gray-600 mb-3">
+                    Learn new technologies.
+                </p>
+                <p class="font-bold text-indigo-600">
+                    ₹200
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6">
+
+        <div class="bg-white rounded-xl shadow p-6 text-center">
+
+            <h3 class="text-xl font-bold mb-2">
+                🎟️ Registration Status
+            </h3>
+
+            <p class="text-gray-600">
+                <span id="registeredSeats">0</span>
+                / 100 seats registered
+            </p>
+
+            <div class="w-full bg-gray-200 rounded-full h-3 mt-4">
+                <div id="seatProgress"
+                     class="bg-indigo-600 h-3 rounded-full"
+                     style="width: 0%">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="register" class="max-w-6xl mx-auto px-6 py-12">
+
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Event Registration
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl shadow p-6 md:p-8">
+
+                <form id="registrationForm">
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           👤 Full Name 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                        <p id="nameError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           📧 Email 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="example@gmail.com"
+                            class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                        <p id="emailError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           📱 Mobile Number 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="mobile"
+                            placeholder="10 digit mobile number"
+                            maxlength="10"
+                            class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                        <p id="mobileError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           🎂 Age 
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Enter your age"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                        <p id="ageError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           🏫 College Name 
+                        </label>
+
+                        <input
+                            type="text"
+                            id="college"
+                            placeholder="Enter college name"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                        <p id="collegeError"
+                           class="text-red-500 text-sm mt-1">
+                        </p>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                          🎓 Course
+                        </label>
+
+                        <select
+                            id="course"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="">
+                                Select Course
+                            </option>
+
+                            <option value="B.Tech IT">
+                                B.Tech IT
+                            </option>
+
+                            <option value="B.Tech CSE">
+                                B.Tech CSE
+                            </option>
+
+                            <option value="BCA">
+                                BCA
+                            </option>
+
+                            <option value="MCA">
+                                MCA
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           💻 Select Event 
+                        </label>
+
+                        <select
+                            id="event"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="">
+                                Select Event
+                            </option>
+
+                            <option value="Coding Competition">
+                                Coding Competition - ₹100
+                            </option>
+
+                            <option value="Quiz Competition">
+                                Quiz Competition - ₹50
+                            </option>
+
+                            <option value="Web Design">
+                                Web Design - ₹150
+                            </option>
+
+                            <option value="Workshop">
+                                Workshop - ₹200
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                        👥 Participation Type
+                        </label>
+
+                        <div class="flex gap-6">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="participation"
+                                    value="Individual"
+                                    checked
+>
+                                Individual
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="participation"
+                                    value="Team"
+                                >
+                                Team
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div id="teamSection"
+                         class="hidden mb-5 p-4 bg-gray-50 rounded-lg">
+
+                        <label class="block font-semibold mb-2">
+                            Team Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="teamName"
+                            placeholder="Enter team name"
+                            class="w-full border rounded-lg px-4 py-3 mb-4">
+
+                        <label class="block font-semibold mb-2">
+                            Number of Members
+                        </label>
+
+                        <select
+                            id="members"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="2">2 Members</option>
+                            <option value="3">3 Members</option>
+                            <option value="4">4 Members</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           🥗 Food Preference
+                        </label>
+
+                        <select
+                            id="food"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="Vegetarian">
+                                Vegetarian
+                            </option>
+
+                            <option value="Non-Vegetarian">
+                                Non-Vegetarian
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           👕 T-Shirt Size
+                        </label>
+
+                        <select
+                            id="tshirt"
+                            class="w-full border rounded-lg px-4 py-3">
+
+                            <option value="S">Small (S)</option>
+                            <option value="M">Medium (M)</option>
+                            <option value="L">Large (L)</option>
+                            <option value="XL">Extra Large (XL)</option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                        🧑‍🎓 Are you a student?
+                        </label>
+
+                        <div class="flex gap-6">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="student"
+                                    value="Yes"
+                                    checked
+                                >
+                                Yes
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="student"
+                                    value="No"
+                                >
+                                No
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label class="block font-semibold mb-2">
+                           📝 Special Requirements
+                        </label>
+
+                        <textarea
+                            id="requirements"
+                            maxlength="200"
+                            rows="4"
+                            placeholder="Any special requirements..."
+                            class="w-full border rounded-lg px-4 py-3"
+                        ></textarea>
+
+                        <p class="text-sm text-gray-500 text-right">
+                            <span id="charCount">0</span> / 200
+                        </p>
+
+                    </div>
+
+                    <div class="flex gap-4">
+
+                        <button
+                            type="button"
+                            onclick="clearForm()"
+                            class="w-1/2 bg-gray-200 py-3 rounded-lg font-semibold hover:bg-gray-300">
+                            Clear
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="openConfirmation()"
+                            class="w-1/2 bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+                            Register
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+
+            <div>
+
+                <div class="bg-white rounded-xl shadow p-6 md:p-8 sticky top-5">
+
+                    <h2 class="text-2xl font-bold mb-6">
+                        📋 Registration Summary
+                    </h2>
+
+                    <div class="space-y-4">
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">👤Name</span>
+                            <span id="summaryName"
+                                  class="font-semibold">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">📧Email</span>
+                            <span id="summaryEmail"
+                                  class="font-semibold text-right">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">📱Mobile</span>
+                            <span id="summaryMobile"
+                                  class="font-semibold">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">🏫 College</span>
+                            <span id="summaryCollege"
+                                  class="font-semibold text-right">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">🎯Event</span>
+                            <span id="summaryEvent"
+                                  class="font-semibold">
+                                —
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">👥Participation</span>
+                            <span id="summaryParticipation"
+                                  class="font-semibold">
+                                Individual
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">🍱Food</span>
+                            <span id="summaryFood"
+                                  class="font-semibold">
+                                Vegetarian
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between border-b pb-3">
+                            <span class="text-gray-500">👕 T-Shirt</span>
+                            <span id="summaryTshirt"
+                                  class="font-semibold">
+                                M
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8 bg-indigo-50 rounded-lg p-5">
+
+                        <div class="flex justify-between mb-2">
+                            <span>🎟️Registration Fee</span>
+
+                            <span id="summaryFee">
+                                ₹0
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between mb-2 text-green-600">
+
+                            <span>
+                                🎓Student Discount
+                            </span>
+
+                            <span id="summaryDiscount">
+                                ₹0
+                            </span>
+
+                        </div>
+
+                        <div class="border-t pt-3 mt-3 flex justify-between text-xl font-bold">
+
+                            <span>
+                                💰Total
+                            </span>
+
+                            <span id="summaryTotal">
+                                ₹0
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="faq" class="max-w-4xl mx-auto px-6 py-12">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+
+            <div class="bg-white rounded-lg shadow">
+
+                <button
+                  onclick="toggleFAQ(1)"
+                    class="bg-indigo-300 w-full p-5 font-semibold flex justify-between">
+                    What is the registration fee?
+                    <span>+</span>
+                </button>
+
+                <p id="faq1"
+                   class="hidden px-5 pb-5 text-gray-600">
+                    The registration fee depends on the event you select.
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-lg shadow">
+
+                <button
+                    onclick="toggleFAQ(2)"
+                    class="bg-indigo-300 w-full text-left p-5 font-semibold flex justify-between">
+                    Can I edit my registration?
+                    <span>+</span>
+                </button>
+
+                <p id="faq2"
+                   class="hidden px-5 pb-5 text-gray-600">
+                    Yes. You can edit your details before final confirmation.
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-lg shadow">
+
+                <button
+                    onclick="toggleFAQ(3)"
+                    class="bg-indigo-300 w-full text-left p-5 font-semibold flex justify-between">
+                    Will I receive a registration ID?
+                    <span>+</span>
+                </button>
+
+                <p id="faq3"
+                   class="hidden px-5 pb-5 text-gray-600">
+                    Yes. A registration ID will be displayed after confirmation.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white text-center py-6">
+
+        <p>
+            © 2026 TechFest | Event Registration System
+        </p>
+
+    </footer>
+
+    <div id="confirmationModal"
+         class="hidden fixed inset-0 bg-black/60 flex items-center justify-center p-5 z-50">
+
+        <div class="bg-white rounded-2xl max-w-md w-full p-7">
+
+            <h2 class="text-2xl font-bold mb-5 text-center">
+                Confirm Registration
+            </h2>
+
+            <p class="text-gray-600 mb-5 text-center">
+                Please check your details before confirming.
+            </p>
+
+            <div class="bg-gray-100 rounded-lg p-4 space-y-3">
+
+                <p>
+                    <b>Name:</b>
+                    <span id="modalName"></span>
+                </p>
+
+                <p>
+                    <b>Event:</b>
+                    <span id="modalEvent"></span>
+                </p>
+
+                <p>
+                    <b>Participation:</b>
+                    <span id="modalParticipation"></span>
+                </p>
+
+                <p>
+                    <b>Total Fee:</b>
+                    ₹<span id="modalTotal"></span>
+                </p>
+            </div>
+
+            <div class="flex gap-4 mt-6">
+
+                <button
+                    onclick="closeModal()"
+                    class="w-1/2 bg-gray-200 py-3 rounded-lg font-semibold hover:bg-gray-300">
+                    Edit
+                </button>
+
+                <button
+                    onclick="confirmRegistration()"
+                    class="w-1/2 bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+                    Confirm
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal"
+         class="hidden fixed inset-0 bg-black/60 flex items-center justify-center p-5 z-50">
+
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 text-center">
+
+            <div class="text-6xl mb-4">
+                🎉
+            </div>
+
+            <h2 class="text-3xl font-bold text-green-600 mb-3">
+                Registration Successful!
+            </h2>
+
+            <p class="text-gray-600 mb-6">
+                Thank you for registering for TechFest 2026.
+            </p>
+
+            <div class="bg-indigo-50 rounded-lg p-5 mb-6">
+
+                <p class="text-gray-500">
+                    Registration ID
+                </p>
+
+                <p id="registrationId"
+                   class="text-2xl font-bold text-indigo-700">
+                </p>
+
+            </div>
+
+            <button
+                onclick="registerAnother()"
+                class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+                Register Another Person
+            </button>
+
+        </div>
+    </div>
+
+    <script>
+
+        let registered = 0;
+        const totalSeats = 100;
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const mobileInput = document.getElementById("mobile");
+        const ageInput = document.getElementById("age");
+        const collegeInput = document.getElementById("college");
+        const eventInput = document.getElementById("event");
+        const requirementsInput = document.getElementById("requirements");
+
+        nameInput.addEventListener("input", function () {
+
+            let name = nameInput.value;
+
+            if (name == "") {
+
+                document.getElementById("nameError").innerText =
+                    "Name is required.";
+            }
+            else if (name.length < 3) {
+
+                document.getElementById("nameError").innerText =
+                    "Name must contain at least 3 characters.";
+            }
+            else {
+
+                document.getElementById("nameError").innerText =
+                    "✓ Valid name";
+            }
+
+            updateSummary();
+        });
+
+        emailInput.addEventListener("input", function () {
+
+            let email = emailInput.value;
+            if (email == "") {
+
+                document.getElementById("emailError").innerText =
+                    "Email is required.";
+            }
+            else if (!email.includes("@") || !email.includes(".")) {
+
+                document.getElementById("emailError").innerText =
+                    "Enter a valid email address.";
+            }
+            else {
+
+                document.getElementById("emailError").innerText =
+                    "✓ Valid email";
+            }
+
+            updateSummary();
+        });
+
+        mobileInput.addEventListener("input", function () {
+
+            let mobile = mobileInput.value;
+            if (mobile == "") {
+
+                document.getElementById("mobileError").innerText =
+                    "Mobile number is required.";
+            }
+            else if (mobile.length != 10) {
+
+                document.getElementById("mobileError").innerText =
+                    "Mobile number must contain 10 digits.";
+            }
+            else {
+
+                document.getElementById("mobileError").innerText =
+                    "✓ Valid mobile number";
+            }
+
+            updateSummary();
+        });
+
+        ageInput.addEventListener("input", function () {
+
+            let age = Number(ageInput.value);
+            if (age == 0) {
+
+                document.getElementById("ageError").innerText =
+                    "Age is required.";
+            }
+            else if (age < 16 || age > 60) {
+
+                document.getElementById("ageError").innerText =
+                    "Age must be between 16 and 60.";
+            }
+            else {
+
+                document.getElementById("ageError").innerText =
+                    "✓ Valid age";
+            }
+        });
+
+        collegeInput.addEventListener("input", function () {
+
+            let college = collegeInput.value;
+
+            if (college == "") {
+                document.getElementById("collegeError").innerText =
+                    "College name is required.";
+            }
+            else {
+
+                document.getElementById("collegeError").innerText =
+                    "✓ Valid";
+            }
+            updateSummary();
+        });
+
+        function updateSummary() {
+
+            document.getElementById("summaryName").innerText =
+                nameInput.value || "—";
+
+            document.getElementById("summaryEmail").innerText =
+                emailInput.value || "—";
+
+            document.getElementById("summaryMobile").innerText =
+                mobileInput.value || "—";
+
+            document.getElementById("summaryCollege").innerText =
+                collegeInput.value || "—";
+
+            document.getElementById("summaryEvent").innerText =
+                eventInput.value || "—";
+
+            let participation =
+                document.querySelector(
+                    'input[name="participation"]:checked'
+                ).value;
+
+            document.getElementById("summaryParticipation").innerText =
+                participation;
+
+            document.getElementById("summaryFood").innerText =
+                document.getElementById("food").value;
+
+            document.getElementById("summaryTshirt").innerText =
+                document.getElementById("tshirt").value;
+
+            calculateFee();
+        }
+
+        function calculateFee() {
+
+            let event = eventInput.value;
+            let fee = 0;
+
+            if (event == "Coding Competition") {
+
+                fee = 100;
+
+            }
+            else if (event == "Quiz Competition") {
+
+                fee = 50;
+            }
+            else if (event == "Web Design") {
+
+                fee = 150;
+            }
+            else if (event == "Workshop") {
+
+                fee = 200;
+            }
+
+            let student =
+                document.querySelector(
+                    'input[name="student"]:checked'
+                ).value;
+
+            let discount = 0;
+
+            if (student == "Yes") {
+                discount = fee * 0.20;
+            }
+
+            let total = fee - discount;
+
+            document.getElementById("summaryFee").innerText =
+                "₹" + fee;
+
+            document.getElementById("summaryDiscount").innerText =
+                "₹" + discount;
+
+            document.getElementById("summaryTotal").innerText =
+                "₹" + total;
+        }
+
+        eventInput.addEventListener("change", function () {
+
+            updateSummary();
+        });
+
+        document.getElementById("food")
+            .addEventListener("change", updateSummary);
+
+        document.getElementById("tshirt")
+            .addEventListener("change", updateSummary);
+
+        document.querySelectorAll(
+            'input[name="student"]'
+        ).forEach(function (radio) {
+
+            radio.addEventListener("change", calculateFee);
+        });
+
+        document.querySelectorAll(
+            'input[name="participation"]'
+        ).forEach(function (radio) {
+
+            radio.addEventListener("change", function () {
+
+                let participation = this.value;
+                let teamSection =
+                    document.getElementById("teamSection");
+
+                if (participation == "Team") {
+
+                    teamSection.classList.remove("hidden");
+                }
+                else {
+
+                    teamSection.classList.add("hidden");
+                }
+
+                updateSummary();
+            });
+        });
+
+        requirementsInput.addEventListener("input", function () {
+
+            let count = requirementsInput.value.length;
+
+            document.getElementById("charCount").innerText =
+                count;
+        });
+
+        function openConfirmation() {
+
+            let name = nameInput.value;
+            let email = emailInput.value;
+            let mobile = mobileInput.value;
+            let age = Number(ageInput.value);
+            let college = collegeInput.value;
+            let event = eventInput.value;
+
+            if (name == "") {
+
+                alert("Please enter your name.");
+                return;
+            }
+
+            if (email == "") {
+
+                alert("Please enter your email.");
+                return;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+
+                alert("Please enter a valid email.");
+                return;
+            }
+
+            if (mobile.length != 10) {
+
+                alert("Please enter a valid 10-digit mobile number.");
+                return;
+            }
+
+            if (age < 16 || age > 60) {
+
+                alert("Please enter a valid age.");
+                return;
+            }
+
+            if (college == "") {
+
+                alert("Please enter your college name.");
+                return;
+            }
+
+            if (event == "") {
+
+                alert("Please select an event.");
+                return;
+            }
+
+            document.getElementById("modalName").innerText =
+                name;
+
+            document.getElementById("modalEvent").innerText =
+                event;
+
+            let participation =
+                document.querySelector(
+                    'input[name="participation"]:checked'
+                ).value;
+
+            document.getElementById("modalParticipation").innerText =
+                participation;
+
+            let total =
+                document.getElementById("summaryTotal").innerText;
+
+            document.getElementById("modalTotal").innerText =
+                total.replace("₹", "");
+
+            document.getElementById("confirmationModal")
+                .classList.remove("hidden");
+        }
+
+        function closeModal() {
+
+            document.getElementById("confirmationModal")
+                .classList.add("hidden");
+        }
+
+        function confirmRegistration() {
+
+            if (registered >= totalSeats) {
+
+                alert("Sorry! All seats are full.");
+                return;
+            }
+
+            registered++;
+
+            document.getElementById("registeredSeats")
+                .innerText = registered;
+
+            let percentage =
+                (registered / totalSeats) * 100;
+
+            document.getElementById("seatProgress")
+                .style.width = percentage + "%";
+
+            let registrationNumber =
+                1000 + registered;
+
+            let registrationId =
+                "EVT2026-" + registrationNumber;
+
+            document.getElementById("registrationId")
+                .innerText = registrationId;
+
+            document.getElementById("confirmationModal")
+                .classList.add("hidden");
+
+            document.getElementById("successModal")
+                .classList.remove("hidden");
+
+            console.log("Registration successful");
+            console.log("Registration ID:", registrationId);
+
+        }
+
+        function registerAnother() {
+
+            document.getElementById("successModal")
+                .classList.add("hidden");
+
+            clearForm();
+
+            window.location.href = "#register";
+        }
+
+        function clearForm() {
+
+            document.getElementById("registrationForm").reset();
+            document.getElementById("teamSection")
+                .classList.add("hidden");
+
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("mobileError").innerText = "";
+            document.getElementById("ageError").innerText = "";
+            document.getElementById("collegeError").innerText = "";
+
+            document.getElementById("charCount").innerText = "0";
+
+            document.getElementById("summaryName").innerText = "—";
+            document.getElementById("summaryEmail").innerText = "—";
+            document.getElementById("summaryMobile").innerText = "—";
+            document.getElementById("summaryCollege").innerText = "—";
+            document.getElementById("summaryEvent").innerText = "—";
+            document.getElementById("summaryParticipation").innerText = "Individual";
+            document.getElementById("summaryFood").innerText = "Vegetarian";
+            document.getElementById("summaryTshirt").innerText = "M";
+            document.getElementById("summaryFee").innerText = "₹0";
+            document.getElementById("summaryDiscount").innerText = "₹0";
+            document.getElementById("summaryTotal").innerText = "₹0";
+        }
+
+        function toggleFAQ(number) {
+
+            let faq =
+                document.getElementById("faq" + number);
+
+            if (faq.classList.contains("hidden")) {
+
+                faq.classList.remove("hidden");
+            }
+            else {
+                faq.classList.add("hidden");
+            }
+        }
+    </script>
+
+</body>
+</html>
